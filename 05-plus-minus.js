@@ -1,3 +1,7 @@
+function getRatio(num, array) {
+  return `${(num / array.length).toFixed(6)}`;
+}
+
 function plusMinus(arr) {
   let positive = 0;
   let negative = 0;
@@ -8,7 +12,20 @@ function plusMinus(arr) {
     if (el === 0) zero++;
   });
 
-  console.log(`${positive / arr.length.toFixed(1)}`.padEnd(6, '0'));
-  console.log(`${negative / arr.length.toFixed(1)}`.padEnd(6, '0'));
-  console.log(`${zero / arr.length.toFixed(1)}`.padEnd(6, '0'));
+  const positiveRatio = getRatio(positive, arr);
+  const negativeRatio = getRatio(negative, arr);
+  const zeroRatio = getRatio(zero, arr);
+
+  console.log(positiveRatio);
+  console.log(negativeRatio);
+  console.log(zeroRatio);
 }
+
+// DRIVER CODE
+
+// const arr = [
+//   55, 48, 48, 45, 91, 97, 45, 1, 39, 54, 36, 6, 19, 35, 66, 36, 72, 93, 38, 21,
+//   65, 70, 36, 63, 39, 76, 82, 26, 67, 29, 24, 82, 62, 53, 1, 50, 47, 65, 67, 19,
+//   66, 90, 77,
+// ];
+// plusMinus(arr);

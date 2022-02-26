@@ -36,12 +36,14 @@ function diagonalDifference(arr) {
   return Math.abs(leftToRightTotal - rightToLeftTotal);
 }
 
-const arr = [
-  [-10, 3, 0, 5, -4],
-  [2, -1, 0, 2, -8],
-  [9, -2, -5, 6, 0],
-  [9, -7, 4, 8, -2],
-  [3, 7, 8, -5, 0],
-];
+// DRIVER CODE
 
-console.log(diagonalDifference(arr));
+// const arr = [
+//   [-10, 3, 0, 5, -4],
+//   [2, -1, 0, 2, -8],
+//   [9, -2, -5, 6, 0],
+//   [9, -7, 4, 8, -2],
+//   [3, 7, 8, -5, 0],
+// ];
+
+// console.log(diagonalDifference(arr));
