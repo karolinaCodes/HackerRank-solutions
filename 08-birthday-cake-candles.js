@@ -6,16 +6,18 @@ candles=[4,4,1,3]
 The maximum height candles are 4 units high. There are 2 of them, so return 2.*/
 
 function birthdayCakeCandles(candles) {
-  let largest = candles[0];
+  let largest = candles[0]; // O(1)
   let count = 0;
   candles.forEach(candle => {
     if (candle > largest) {
       largest = candle;
       count = 0;
     }
-    if (candle === largest) count++;
+    // O(n)
+    if (candle === largest) count++; // O(1)
   });
   return count;
+  // O(2) + O(n) = O(n)
 }
 
 // DRIVER CODE

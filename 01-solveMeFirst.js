@@ -7,4 +7,5 @@ Return 10.*/
 
 function solveMeFirst(a, b) {
   return a + b;
+  // O(1);
 }

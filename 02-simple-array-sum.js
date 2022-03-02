@@ -12,4 +12,5 @@ ar: an array of integers */
 
 function simpleArraySum(ar) {
   return ar.reduce((acc, curr) => acc + curr, 0);
+  // O(n) + O(1) = (simplified) O(n)
 }

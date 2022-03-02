@@ -5,4 +5,5 @@ In this challenge, you are required to calculate and print the sum of the elemen
 
 function aVeryBigSum(ar) {
   return ar.reduce((acc, curr) => acc + curr, 0);
+  // O(n) + O(1) = O(n)
 }

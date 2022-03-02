@@ -1,5 +1,5 @@
 function getRatio(num, array) {
-  return `${(num / array.length).toFixed(6)}`;
+  return `${(num / array.length).toFixed(6)}`; // O(1)
 }
 
 function plusMinus(arr) {
@@ -7,18 +7,20 @@ function plusMinus(arr) {
   let negative = 0;
   let zero = 0;
   arr.forEach(el => {
-    if (el > 0) positive++;
-    if (el < 0) negative++;
-    if (el === 0) zero++;
+    if (el > 0) positive++; // O(1)
+    if (el < 0) negative++; // O(1)
+    if (el === 0) zero++; // O(1)
   });
+  // O(n)
+  const positiveRatio = getRatio(positive, arr); // O(1)
+  const negativeRatio = getRatio(negative, arr); // O(1)
+  const zeroRatio = getRatio(zero, arr); // O(1)
 
-  const positiveRatio = getRatio(positive, arr);
-  const negativeRatio = getRatio(negative, arr);
-  const zeroRatio = getRatio(zero, arr);
+  console.log(positiveRatio); // O(1)
+  console.log(negativeRatio); // O(1)
+  console.log(zeroRatio); // O(1)
 
-  console.log(positiveRatio);
-  console.log(negativeRatio);
-  console.log(zeroRatio);
+  // O(10) + O(n) = O(n)
 }
 
 // DRIVER CODE

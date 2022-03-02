@@ -14,9 +14,9 @@ Return '00:01:00'.
 
 function timeConversion(s) {
   let militaryTime;
-  const middayTime = s.slice(-2);
-  s = s.slice(0, -2);
-  const [hour, min, sec] = s.split(':');
+  const middayTime = s.slice(-2); // O(n)
+  s = s.slice(0, -2); // O(n)
+  const [hour, min, sec] = s.split(':'); // O(n)
 
   if (middayTime === 'AM' && hour === '12') {
     return (militaryTime = `00:${min}:${sec ? sec : '00'}`);
@@ -31,6 +31,8 @@ function timeConversion(s) {
     militaryTime = `${+hour + 12}:${min}:${sec ? sec : '00'}`;
 
   return militaryTime;
+
+  // O(3n) = O(n)
 }
 
 // DRIVER CODE
