@@ -1,5 +1,5 @@
 function getMoneySpent(keyboards, drives, b) {
-  const max = -1;
+  let max = -1;
   for (let i = 0; i < keyboards.length; i++) {
     let temp = 0;
     for (let j = 0; j < drives.length; j++) {
